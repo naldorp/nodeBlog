@@ -1,8 +1,4 @@
-head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE-edge")
-    meta(name="viewport",content="width=device-width,initial-scale=1")
-    title The simplest blog ever created 
-    link(href="css/bootstrap.min.css",rel="stylesheet")
-body
-    
+extends layout
+block content
+    - var articles = [{title:"test1", createDate: new Date(), text:"Ipsum dolor sit amet <b>yes</b>"},{title:"test2", createDate: new Date(), text:"Ipsum dolor sit amet <i>yes</i>"}];
+    include shared/displayTemplates/article
