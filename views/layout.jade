@@ -1,0 +1,38 @@
+head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE-edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    title The simplest blog ever created 
+    link(href="css/bootstrap.min.css", rel="stylesheet")
+    link(href="css/style.css", rel="stylesheet")
+body
+    .blog-masthead
+        .container
+            nav.blog-nav
+                a.blog-nav-item.active(href="/") Home
+                a.blog-nav-item(href="/about") About
+                a.blog-nav-item(href="/login") Sign in
+    .container
+        .blog-header
+            h1.blog-title Just a Simple Blog
+            p.lead.blog-description Just a simple blog made with node.js
+        .row
+            div.col-sm-8.blog-main
+                block content
+                nav
+                    ul.pager
+                        li
+                            a(href="#") Previous
+                        li
+                            a(href="#") Next
+            div.col-sm-3.col-sm-offset-1.blog-sidebar
+                div.sidebar-module.sidebar-module-inset
+                    h4 About
+                    p About me TODO
+    footer.blog-footer 
+        p just a simple blog
+
+script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")        
+script(type="text/javascript", src="js/bootstrap.min.js")
