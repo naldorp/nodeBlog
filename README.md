@@ -1,2 +1,2 @@
 # nodeBlog
-This is simple blog made using node.js
+This is a simple blog made with node.js
