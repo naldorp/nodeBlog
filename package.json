@@ -1,0 +1,28 @@
+{
+  "name": "nodeBlog",
+  "version": "0.1.0",
+  "description": "This is a simple blog made with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naldorp/nodeBlog.git"
+  },
+  "author": "Francinaldo Portela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naldorp/nodeBlog/issues"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "superagent": "^2.3.0",
+    "mocha": "^3.1.2"
+  }
+}
