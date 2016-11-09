@@ -1,6 +1,6 @@
-each article, index in articles
-    .blog-post
+extends layout
+block content
+     .blog-post
         h2.blog-post-title= article.title
         p.blog-post-meta= article.creationDate
         p!=article.text
-        

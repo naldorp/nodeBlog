@@ -1,0 +1,48 @@
+body{
+  background-color:#dadfe1;
+  font-family: Open Sans;
+  font-weight: 300;
+  color: #5c5c5c;
+  overflow-y: scroll;
+}
+
+body > .wrapper {
+  max-width: 339px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+@media (min-width: 386px) {
+  body > .wrapper {
+    max-width: 548px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 579px) {
+  body > .wrapper {
+    max-width: 722px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+@media (min-width: 769px) {
+  body > .wrapper {
+    max-width: 894px;
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+}
+@media (min-width: 1183px) {
+  body > .wrapper {
+    max-width: 1328px;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+@media (min-width: 1503px) {
+  body > .wrapper {
+    max-width: 1648px;
+    padding-right: 112px;
+    padding-left: 112px;
+  }
+}
