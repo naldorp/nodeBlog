@@ -7,34 +7,28 @@ head
     title The simplest blog ever created 
     link(href="css/bootstrap.min.css", rel="stylesheet")
     link(href="css/default.css", rel="stylesheet")
+    link(href="css/theme.css", rel="stylesheet")
+    link(href="css/skin.css", rel="stylesheet")
     link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C600&amp;ver=4.6.1", type="text/css", media="all")
+    script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")        
+    script(type="text/javascript", src="js/bootstrap.min.js")
 body
     .wrapper
-        .blog-masthead
-            .container
-                nav.blog-nav
-                    a.blog-nav-item.active(href="/") Home
-                    a.blog-nav-item(href="/about") About
-                    a.blog-nav-item(href="/login") Sign in
-        .container
-            .blog-header
-                h1.blog-title Just a Simple Blog
-                p.lead.blog-description Just a simple blog made with node.js
-            .row
-                div.col-sm-8.blog-main
-                    block content
-                    nav
-                        ul.pager
-                            li
-                                a(href="#") Previous
-                            li
-                                a(href="#") Next
-                div.col-sm-3.col-sm-offset-1.blog-sidebar
-                    div.sidebar-module.sidebar-module-inset
-                        h4 About
-                        p About me TODO
-        footer.blog-footer 
-            p just a simple blog
+        header.header
+            .wrapper.header-wrapper
+                h1.header-title Simple Blog
+                p.header-about Hey, this is a simple blog made with node js and a few other libraries. The purpose of this project is just to be an example of how to implement a system using Mongodb, nodejs and nginx.
+                nav.nav.header-nav(role="navigation")
+                    ul
+                        li.menu-item
+                            a(href="/") Home
+                        li.menu-item
+                            a(href="/Admin") Admin
+                        li.menu-item
+                            a(href="/Login") Sign in
+                   
+        main.main
+            #main-posts.wrapper
+                block content
 
-script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")        
-script(type="text/javascript", src="js/bootstrap.min.js")
+

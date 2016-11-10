@@ -1,6 +1,19 @@
+- var creationDate = new Date();
 each article, index in articles
-    .blog-post
-        h2.blog-post-title= article.title
-        p.blog-post-meta= article.creationDate
-        p!=article.text
+    article.post.type-post.status-publish
+        .post-inner
+            header.post-section.post-header
+                .wrapper.post-wrapper
+                    a.avatar.post-author @naldorp - Francinaldo Portela
+            section.post-section.post-body
+                .wrapper.post-wrapper
+                    h2.post-title= article.title
+                    p!=article.text
+                    .btn.post-tags
+                        each tag, index in article.tags
+                            a.btn-item(href="/tag/"+tag)= tag
+            footer.post-section.post-footer
+                .wrapper.post-wrapper
+                    .meta.post-meta
+                        span.icon-ui.icon-ui-date.meta-link.meta-date= creationDate
         
