@@ -22,10 +22,18 @@ body
                     ul
                         li.menu-item
                             a(href="/") Home
-                        li.menu-item
-                            a(href="/Admin") Admin
-                        li.menu-item
-                            a(href="/Login") Sign in
+                        if(admin)
+                            li.menu-item
+                                a(href="/Admin") Admin
+                            li.menu-item
+                                a(href="/Logout") Sign out
+                        else
+                            li.menu-item
+                                a(href="/Login") Sign in
+                            li.menu-item
+                                a(href="/auth/twitter") Sign in - Twitter
+
+                                
                    
         main.main
             #main-posts.wrapper

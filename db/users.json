@@ -3,4 +3,10 @@
     "name": "Administrator",
     "isAdmin": true,
     "password": "123"
+},
+{
+    "email":"naldorp@test.com",
+    "name": "naldorp",
+    "isAdmin": true,
+    "password": "123"
 }]
