@@ -5,15 +5,10 @@ var express = require("express"),
     http = require("http"),
     path = require("path"),
     routes = require("./routes"),
-    mongoskin = require("mongoskin"),
-    dbConnectionString = process.env.DATABASE_CON || "mongodb://@localhost:27017/blog",
-    db = mongoskin.db(dbConnectionString, {
-        safe: true
-    }),
-    collections = {
-        articles: db.collection('articles'),
-        users: db.collection('users')
-    };
+    mongoose = require("mongoose"),
+    models = require('./models'),
+    dbConnectionString = process.env.DATABASE_CON || "mongodb://localhost:27017/blog",
+    db = mongoose.connect(dbConnectionString, {safe:true});
 
 //express requires  
 var session = require('express-session'),
@@ -42,8 +37,8 @@ var app = express();
 
 //middleware(expose all collections to all routes)
 app.use(function(req, res, next) {
-    if (!collections.articles || !collections.users) return next(new Error('No collections'));
-    req.collections = collections;
+    if (!models.Article || !models.User) return next(new Error('No models loaded'));
+    req.models = models;
     return next();
 });
 
