@@ -1,11 +1,4 @@
 # nodeBlog
 This is a simple blog made with node.js
 
-TODO List:
-- [x] Create master layout page and css
-- [ ] Create index page with blog posts
-- [ ] Create menu screen page
-- [ ] Create article detail page
-- [ ] Create admin page
-- [ ] create post article page
-
+[![CircleCI](https://circleci.com/gh/naldorp/nodeBlog.svg?style=svg)](https://circleci.com/gh/naldorp/nodeBlog)
