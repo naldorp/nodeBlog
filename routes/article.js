@@ -62,7 +62,7 @@ exports.postArticle = function(req,res,next){
 }
 
 exports.admin = function(req,res,next){
-    req.models.Articles.list(function(err,articles){
+    req.models.Article.list(function(err,articles){
         if(err) return next(err);
         res.render('admin',{articles:articles});
     });
